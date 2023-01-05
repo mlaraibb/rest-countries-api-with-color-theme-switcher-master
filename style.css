@@ -1,0 +1,329 @@
+@import url('https://fonts.google.com/specimen/Nunito+Sans');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --DarkBlue-DarkModeElements : hsl(209, 23%, 22%);
+    --VeryDarkBlue-DarkModeBackground: hsl(207, 26%, 17%);
+    --fontcolor: hsl(200, 15%, 8%);
+    --DarkGray-LightModeInput: hsl(0, 0%, 52%);
+    --bgColor: hsl(0, 0%, 98%);
+    --White-DarkModeTextAndLightModeElements: hsl(0, 0%, 100%);
+}
+body{
+    width: 100%;
+    min-height: 100vh ;
+   --bgColor:hsl(0, 0%, 98%);
+   --fontColor:hsl(200, 15%, 8%);
+    font-family: 'Nunito Sans', sans-serif;
+    /* font-weight:300, 600, 800; */
+}
+.dark{
+  --bgColor: hsl(207, 26%, 17%);
+  --fontcolor:hsl(0, 0%, 98%);
+  background: var(--bgColor);
+  color: var(--fontcolor)!important;
+  --countrybgcolor:hsl(209, 23%, 22%);
+   
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+.container:nth-child(1){
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    background: var(--countrybgcolor);
+}
+button{
+    outline: none;
+    border: 0;
+    color: var(--VeryDarkBlue-LightModeText);
+    background: transparent;
+}
+.toggle{
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--fontcolor);
+}
+.toggle i{
+    padding-right: 5px;
+}
+
+/* header*/ 
+
+.form-control{
+    width: 400px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    background: var(--countrybgcolor);
+}
+i{
+    cursor: pointer;
+}
+.form-control input{
+   width: 100%;
+   padding: 17px 25px ;
+   border: none;
+   outline: none;
+   font-size: 15px;
+   letter-spacing: 0.5px;
+   background: transparent;
+   color: var(--fontcolor)
+
+}
+.form-control i{
+    position: absolute;
+    top: 8.2rem;
+    left: 2rem;
+    font-size: 12px;
+    color: grey;
+   
+}
+
+/*dropdown */ 
+
+.dropdown-container{
+    width: 200px;
+    position: relative;
+    background: var(--countrybgcolor);
+}
+.dropdown{
+    width: 100%;
+    padding: 17px 14px;
+    border-radius: 5px;
+    box-shadow: 0 0  5px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 15px;
+}
+.dropdown p{
+    letter-spacing: 0.5px;
+}
+.drop{
+    position: absolute;
+    box-shadow: 0 0  5px rgba(0,0,0,0.3);
+    top: 4rem;
+    padding: 10px 14px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    background: var(--bgColor);
+}
+.drop p{
+    margin: 5px 0 ;
+}
+/*countries-description */ 
+
+.countries{
+   
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 2fr));
+    grid-gap: 20px;
+}
+.country{
+    min-height: 350px;
+    box-shadow:0 0 5px rgba(0,0,0,0.3) ;
+    width: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    background: var(--countrybgcolor);
+
+}
+.country-img{
+    height: 250px;
+}
+.country-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.country-info{
+    padding: 20px 17px;
+    
+}
+.country-info p{
+    letter-spacing: .5px;
+    padding:4px;
+}
+.country-info p>strong{
+    font-weight: 600;
+}
+h5{
+    padding: 8px 0;
+    font-size: 1rem;
+    letter-spacing: .5px;
+}
+.showDropDown{
+    display: none ;
+}
+
+/* countries-modal*/ 
+
+.countryModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bgColor);
+    padding: 30px;
+   
+}
+.back{
+    position: absolute;
+    top: 3rem;
+    left: 30px;
+    background-color: var(--bgColor);
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    padding: 10px 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.fa-sharp {
+    margin: 2px;
+}
+.modal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+.leftModal{
+    width: 35%;
+}
+.leftModal img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.rightModal{
+    width: 50%;
+    margin-left: 20px;
+}
+.modalInfo{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.rightModal h1{
+    margin: 10px 0;
+    letter-spacing: 1px;
+    font-size: 40px;
+}
+.inner p{
+    letter-spacing: 1px;
+    padding: 10px;
+}
+.inner p>strong{
+    font-weight: 600;
+}
+.show{
+    display: none;
+}
+.border{
+    position: absolute;
+    top: 30rem;
+    left:40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.border li{
+    padding: 20px;
+    list-style: none;  
+}
+.border li a{
+    display: block;
+    text-decoration: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    border: 2px solid (--bgColor);
+    min-width: 4px;
+    padding: 1rem;
+    color:var(--fontcolor) ;
+}
+
+/*mobile-display*/
+
+@media screen and (max-width:800px){
+    .container h1{
+        font-size: 20px;
+    }
+    .form-control{
+     max-width: 900px;
+     position: relative;
+    }
+    .form-control input{
+        width: 100%;
+    }
+    .dropdown-container{
+        width: 200px;
+        position: absolute;
+        top: 10rem;
+    }
+    .countries{
+        padding: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px, 2fr));
+        grid-gap: 20px;
+    }
+    .drop{
+        background: var(--bgColor);
+    }
+    .modal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+    }
+    .leftModal{
+        width: 40%;
+    }
+    .leftModal img{
+       position: relative;
+        right: 30px;
+        width: 200%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .rightModal{
+        width: 50%;
+        margin-left: 20px;
+    }
+    .modalInfo{
+        display: flex;
+      flex-direction: column;
+      padding: 0;
+
+    }
+    .rightModal h1{
+        margin: 10px 0;
+        font-size: 30px;
+    }
+    .inner{
+        padding: 10px;
+    }
+    .inner p{
+        padding: 5px;
+    }
+    .inner strong{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+    
+}
